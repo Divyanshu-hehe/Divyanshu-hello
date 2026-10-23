@@ -1582,6 +1582,374 @@
             color: #2F8D46;
         }
 
+        /* ============== GITHUB SECTION ============== */
+        .github-section {
+            padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 2rem);
+            background-color: var(--cream);
+            position: relative;
+        }
+
+        .github-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Profile Banner Card */
+        .github-profile-card {
+            background: var(--cream-card);
+            border: 2px solid var(--black);
+            border-radius: 24px;
+            padding: clamp(1.5rem, 3.5vw, 2.5rem);
+            box-shadow: 6px 6px 0px var(--black);
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .github-profile-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0px var(--black);
+        }
+
+        .github-profile-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .github-avatar {
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            border: 3px solid var(--black);
+            box-shadow: 3px 3px 0px var(--black);
+            object-fit: cover;
+            background: #FFFFFF;
+            flex-shrink: 0;
+        }
+
+        .github-user-meta h3 {
+            font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+            font-weight: 800;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+        }
+
+        .github-user-meta p {
+            color: #555555;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+        }
+
+        .github-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .github-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.3rem 0.75rem;
+            background: var(--cream);
+            border: 1.5px solid var(--black);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--black);
+            box-shadow: 1.5px 1.5px 0px var(--black);
+        }
+
+        .github-badge.highlight {
+            background: #D4F5EC;
+            color: #008778;
+        }
+
+        .github-profile-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.6rem;
+            background: var(--black);
+            color: var(--cream);
+            border: 2px solid var(--black);
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+            transition: all 0.25s ease;
+        }
+
+        .github-profile-btn:hover {
+            background: #24292e;
+            color: #FFFFFF;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--black);
+        }
+
+        /* 4 Key Stats Grid */
+        .github-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .github-stat-card {
+            background: var(--cream-card);
+            border: 2px solid var(--black);
+            border-radius: 18px;
+            padding: 1.4rem 1.25rem;
+            box-shadow: 4px 4px 0px var(--black);
+            text-align: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .github-stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 0px var(--black);
+        }
+
+        .github-stat-number {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 900;
+            color: var(--black);
+            line-height: 1.1;
+            margin-bottom: 0.3rem;
+        }
+
+        .github-stat-label {
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666666;
+        }
+
+        /* Language Breakdown Card */
+        .github-languages-card {
+            background: var(--cream-card);
+            border: 2px solid var(--black);
+            border-radius: 20px;
+            padding: 1.5rem 1.75rem;
+            box-shadow: 5px 5px 0px var(--black);
+            margin-bottom: 2.5rem;
+        }
+
+        .github-languages-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .github-languages-header h4 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .github-lang-progress-bar {
+            height: 14px;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 1.5px solid var(--black);
+            box-shadow: 2px 2px 0px var(--black);
+            display: flex;
+            margin-bottom: 1.25rem;
+            background: #E2E8F0;
+        }
+
+        .github-lang-slice {
+            height: 100%;
+            transition: width 1s ease;
+        }
+
+        .lang-ts { background: #3178C6; }
+        .lang-py { background: #3776AB; }
+        .lang-java { background: #EA2D2E; }
+        .lang-html { background: #E34F26; }
+
+        .github-lang-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+
+        .github-lang-item {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .github-lang-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 1px solid var(--black);
+            display: inline-block;
+        }
+
+        /* Repositories Grid */
+        .github-repos-section-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .github-repos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .github-repo-card {
+            background: var(--cream-card);
+            border: 2px solid var(--black);
+            border-radius: 18px;
+            padding: 1.4rem 1.5rem;
+            box-shadow: 5px 5px 0px var(--black);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .github-repo-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0px var(--black);
+        }
+
+        .github-repo-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .github-repo-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex: 1;
+        }
+
+        .github-repo-title-wrap svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            fill: var(--black);
+        }
+
+        .github-repo-name {
+            font-size: 1.08rem;
+            font-weight: 800;
+            color: var(--black);
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .github-repo-name:hover {
+            text-decoration: underline;
+        }
+
+        .github-repo-visibility {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.15rem 0.55rem;
+            background: var(--cream);
+            border: 1px solid var(--black);
+            border-radius: 50px;
+            color: #555555;
+            flex-shrink: 0;
+        }
+
+        .github-repo-desc {
+            font-size: 0.88rem;
+            color: #444444;
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .github-repo-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            padding-top: 0.85rem;
+            border-top: 1.5px dashed var(--cream-border);
+        }
+
+        .github-repo-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #555555;
+        }
+
+        .github-repo-lang {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .github-repo-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--black);
+            text-decoration: none;
+            padding: 0.35rem 0.75rem;
+            background: var(--cream);
+            border: 1.5px solid var(--black);
+            border-radius: 8px;
+            box-shadow: 2px 2px 0px var(--black);
+            transition: all 0.2s ease;
+        }
+
+        .github-repo-link-btn:hover {
+            background: var(--black);
+            color: var(--cream);
+            transform: translate(-1px, -1px);
+            box-shadow: 3px 3px 0px var(--black);
+        }
+
         /* ============== CONTACT SECTION ============== */
         .contact {
             padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 2rem);
@@ -2193,6 +2561,14 @@
             .footer-section:first-child {
                 grid-column: span 2;
             }
+
+            .github-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .github-repos-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* --- 3. Tablets Portrait & Large Foldables (601px - 768px) --- */
@@ -2279,6 +2655,24 @@
             .gfg-btn {
                 width: 100%;
                 justify-content: center;
+            }
+
+            .github-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .github-profile-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .github-profile-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .github-lang-legend {
+                gap: 0.75rem;
             }
         }
 
@@ -2491,6 +2885,7 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#coding" class="nav-link">Coding</a></li>
+                <li><a href="#github" class="nav-link">GitHub</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -2928,6 +3323,260 @@
                 </div>
             </div>
         </div>
+    <!-- GITHUB SECTION -->
+    <section class="github-section" id="github">
+        <div class="github-container">
+            <div class="section-header reveal">
+                <span class="section-label">Open Source &amp; Code</span>
+                <h2 class="section-title">GitHub Activity &amp; Repositories</h2>
+                <p class="section-subtitle">Explore my open-source codebases, active developer projects, algorithm implementations, and real-time GitHub metrics.</p>
+            </div>
+
+            <!-- GitHub Profile Overview Card -->
+            <div class="github-profile-card reveal">
+                <div class="github-profile-left">
+                    <img src="https://avatars.githubusercontent.com/u/215788436?v=4" alt="Divyanshu Pandey GitHub Avatar" class="github-avatar" id="github-avatar">
+                    <div class="github-user-meta">
+                        <h3>Divyanshu Pandey <span class="github-badge highlight">⚡ Active Developer</span></h3>
+                        <p>@Divyanshu-hehe &bull; Software Developer &bull; AI/ML Enthusiast</p>
+                        <div class="github-badges">
+                            <span class="github-badge">📂 Open Source Contributor</span>
+                            <span class="github-badge">📅 Member Since Jun 2025</span>
+                            <span class="github-badge">🚀 Continuous Integration</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/Divyanshu-hehe" target="_blank" rel="noopener noreferrer" class="github-profile-btn" aria-label="Visit Divyanshu's GitHub Profile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View on GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+            </div>
+
+            <!-- Key Stats Cards Row -->
+            <div class="github-stats-grid reveal">
+                <div class="github-stat-card">
+                    <div class="github-stat-number" id="github-repos-count">8</div>
+                    <div class="github-stat-label">📦 Public Repos</div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="github-stat-number" id="github-followers-count">4</div>
+                    <div class="github-stat-label">👥 Followers</div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="github-stat-number" id="github-following-count">9</div>
+                    <div class="github-stat-label">🤝 Following</div>
+                </div>
+                <div class="github-stat-card">
+                    <div class="github-stat-number" style="font-size: 1.5rem; padding-top: 0.35rem;">4 Stacks</div>
+                    <div class="github-stat-label">⚡ TS • Python • Java • HTML</div>
+                </div>
+            </div>
+
+            <!-- Language Breakdown Card -->
+            <div class="github-languages-card reveal">
+                <div class="github-languages-header">
+                    <h4><span>📊</span> Codebase Language Distribution</h4>
+                    <span style="font-size: 0.82rem; font-weight: 700; color: #555555;">Across all public repositories</span>
+                </div>
+                <div class="github-lang-progress-bar" role="progressbar" aria-label="Language Distribution">
+                    <div class="github-lang-slice lang-ts" style="width: 37.5%;" title="TypeScript: 37.5%"></div>
+                    <div class="github-lang-slice lang-py" style="width: 25.0%;" title="Python: 25.0%"></div>
+                    <div class="github-lang-slice lang-html" style="width: 25.0%;" title="HTML / Web: 25.0%"></div>
+                    <div class="github-lang-slice lang-java" style="width: 12.5%;" title="Java: 12.5%"></div>
+                </div>
+                <div class="github-lang-legend">
+                    <div class="github-lang-item"><span class="github-lang-dot" style="background: #3178C6;"></span> TypeScript (37.5%)</div>
+                    <div class="github-lang-item"><span class="github-lang-dot" style="background: #3776AB;"></span> Python (25.0%)</div>
+                    <div class="github-lang-item"><span class="github-lang-dot" style="background: #E34F26;"></span> HTML / CSS (25.0%)</div>
+                    <div class="github-lang-item"><span class="github-lang-dot" style="background: #EA2D2E;"></span> Java (12.5%)</div>
+                </div>
+            </div>
+
+            <!-- Repositories Grid -->
+            <div class="github-repos-section-title reveal">
+                <span>📁 Featured &amp; Public Repositories (8)</span>
+                <span style="font-size: 0.85rem; font-weight: 600; color: #555555;">Auto-synchronized with GitHub</span>
+            </div>
+
+            <div class="github-repos-grid reveal" id="githubReposGrid">
+                <!-- 1. Divyanshu-hello -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M19.25 4.5H4.75C3.78 4.5 3 5.28 3 6.25v11.5c0 .97.78 1.75 1.75 1.75h14.5c.97 0 1.75-.78 1.75-1.75V6.25c0-.97-.78-1.75-1.75-1.75zm-6.75 12h-7.5v-1.5h7.5v1.5zm0-3h-7.5V12h7.5v1.5zm0-3h-7.5V9h7.5v1.5zm6.5 6h-5v-7.5h5v7.5z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/Divyanshu-hello" target="_blank" rel="noopener noreferrer" class="github-repo-name">Divyanshu-hello</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Modern Neobrutalist personal portfolio built with HTML5, CSS3, dynamic APIs, and responsive mobile-first architecture.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #E34F26;"></span> HTML</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/Divyanshu-hello" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. bright-todo-journal -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/bright-todo-journal" target="_blank" rel="noopener noreferrer" class="github-repo-name">bright-todo-journal</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Productivity web application blending task management, daily journaling, and interactive state management built with TypeScript.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #3178C6;"></span> TypeScript</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/bright-todo-journal" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. fakejobdetector-demo -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/fakejobdetector-demo" target="_blank" rel="noopener noreferrer" class="github-repo-name">fakejobdetector-demo</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Machine learning &amp; NLP verification prototype designed to detect fraudulent job postings, recruitment scams, and suspicious listings.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #E34F26;"></span> HTML / ML</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/fakejobdetector-demo" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Asset-Manager -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/Asset-Manager" target="_blank" rel="noopener noreferrer" class="github-repo-name">Asset-Manager</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Resource and digital asset tracking system built with TypeScript and deployed on Replit with responsive dashboard management.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #3178C6;"></span> TypeScript</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/Asset-Manager" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. java-dsa -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/java-dsa" target="_blank" rel="noopener noreferrer" class="github-repo-name">java-dsa</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Clean Java implementations of core and advanced Data Structures &amp; Algorithms, arrays, linked lists, trees, and time complexity optimization.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #EA2D2E;"></span> Java</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/java-dsa" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. codecrusadeprogram -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/codecrusadeprogram" target="_blank" rel="noopener noreferrer" class="github-repo-name">codecrusadeprogram</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Algorithmic challenge solutions and problem solving practice programs implemented in Python for coding competitions and interview prep.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #3776AB;"></span> Python</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/codecrusadeprogram" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. assignment -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/assignment" target="_blank" rel="noopener noreferrer" class="github-repo-name">assignment</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Academic coursework assignments, machine learning experiments, mathematical modeling, and algorithmic problem sets in Python.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #3776AB;"></span> Python</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/assignment" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. codecrsadeprogram -->
+                <div class="github-repo-card">
+                    <div class="github-repo-top">
+                        <div class="github-repo-title-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
+                            <a href="https://github.com/Divyanshu-hehe/codecrsadeprogram" target="_blank" rel="noopener noreferrer" class="github-repo-name">codecrsadeprogram</a>
+                        </div>
+                        <span class="github-repo-visibility">Public</span>
+                    </div>
+                    <p class="github-repo-desc">Core problem solving routines, algorithmic test suites, and supplemental practice drills supporting developer competency.</p>
+                    <div class="github-repo-bottom">
+                        <div class="github-repo-meta">
+                            <span class="github-repo-lang"><span class="github-lang-dot" style="background: #6E7681;"></span> Git / Code</span>
+                            <span>⭐ <span class="repo-stars">0</span></span>
+                            <span>🍴 <span class="repo-forks">0</span></span>
+                        </div>
+                        <a href="https://github.com/Divyanshu-hehe/codecrsadeprogram" target="_blank" rel="noopener noreferrer" class="github-repo-link-btn">
+                            <span>View Repo</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- CONTACT SECTION -->
@@ -3040,6 +3689,7 @@
                     <a href="#skills" style="display: block;">Skills</a>
                     <a href="#projects" style="display: block;">Projects</a>
                     <a href="#coding" style="display: block;">Coding</a>
+                    <a href="#github" style="display: block;">GitHub</a>
                     <a href="#contact" style="display: block;">Contact</a>
                 </div>
                 <div class="footer-section">
@@ -3540,10 +4190,51 @@
             }
         }
 
+        // ============== LIVE GITHUB STATS AUTO-UPDATE ==============
+        async function fetchGitHubStats() {
+            try {
+                const userRes = await fetch('https://api.github.com/users/Divyanshu-hehe');
+                if (userRes.ok) {
+                    const userData = await userRes.json();
+                    const reposEl = document.getElementById('github-repos-count');
+                    const followersEl = document.getElementById('github-followers-count');
+                    const followingEl = document.getElementById('github-following-count');
+                    const avatarEl = document.getElementById('github-avatar');
+
+                    if (reposEl && typeof userData.public_repos === 'number') reposEl.textContent = userData.public_repos;
+                    if (followersEl && typeof userData.followers === 'number') followersEl.textContent = userData.followers;
+                    if (followingEl && typeof userData.following === 'number') followingEl.textContent = userData.following;
+                    if (avatarEl && userData.avatar_url) avatarEl.src = userData.avatar_url;
+                }
+
+                const reposRes = await fetch('https://api.github.com/users/Divyanshu-hehe/repos?sort=updated&per_page=30');
+                if (reposRes.ok) {
+                    const reposData = await reposRes.json();
+                    if (Array.isArray(reposData)) {
+                        reposData.forEach(repo => {
+                            const linkEl = document.querySelector(`.github-repo-name[href*="${repo.name}"]`);
+                            if (linkEl) {
+                                const card = linkEl.closest('.github-repo-card');
+                                if (card) {
+                                    const starsEl = card.querySelector('.repo-stars');
+                                    const forksEl = card.querySelector('.repo-forks');
+                                    if (starsEl && typeof repo.stargazers_count === 'number') starsEl.textContent = repo.stargazers_count;
+                                    if (forksEl && typeof repo.forks_count === 'number') forksEl.textContent = repo.forks_count;
+                                }
+                            }
+                        });
+                    }
+                }
+            } catch (err) {
+                // Keep pre-rendered baseline stats if offline/rate-limited
+            }
+        }
+
         window.addEventListener('load', () => {
             initCodingTabs();
             fetchLeetCodeStats();
             fetchGFGStats();
+            fetchGitHubStats();
         });
     </script>
 </body>
