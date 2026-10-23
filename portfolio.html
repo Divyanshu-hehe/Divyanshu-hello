@@ -1057,6 +1057,293 @@
             box-shadow: 3px 3px 0px var(--black);
         }
 
+        /* ============== COMPETITIVE CODING SECTION ============== */
+        .coding {
+            padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 2rem);
+            background-color: var(--cream);
+            position: relative;
+        }
+
+        .coding-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .leetcode-card {
+            background: var(--cream-card);
+            border: 2px solid var(--black);
+            border-radius: 24px;
+            padding: clamp(1.5rem, 3.5vw, 2.5rem);
+            box-shadow: 6px 6px 0px var(--black);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .leetcode-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0px var(--black);
+        }
+
+        .leetcode-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            padding-bottom: 1.75rem;
+            border-bottom: 2px dashed var(--cream-border);
+            margin-bottom: 2rem;
+        }
+
+        .leetcode-profile-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .leetcode-logo-badge {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--black);
+            color: #FFA116;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--black);
+            box-shadow: 2px 2px 0px var(--black);
+            flex-shrink: 0;
+        }
+
+        .leetcode-logo-badge svg {
+            width: 30px;
+            height: 30px;
+            fill: #FFA116;
+        }
+
+        .leetcode-user-details h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .leetcode-user-details p {
+            font-size: 0.9rem;
+            color: var(--black-subtle);
+            font-weight: 500;
+        }
+
+        .leetcode-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FFA116;
+            color: #000000;
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 50px;
+            border: 2px solid var(--black);
+            text-decoration: none;
+            box-shadow: 3px 3px 0px var(--black);
+            transition: all 0.3s ease;
+        }
+
+        .leetcode-btn:hover {
+            background: #FF8F00;
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px var(--black);
+        }
+
+        .leetcode-stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: clamp(1rem, 2vw, 1.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .lc-stat-box {
+            background: var(--cream);
+            border: 2px solid var(--black);
+            border-radius: 16px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            box-shadow: 3px 3px 0px var(--black);
+            transition: transform 0.25s ease;
+        }
+
+        .lc-stat-box:hover {
+            transform: translateY(-2px);
+        }
+
+        .lc-stat-box.easy {
+            border-top: 5px solid #00B8A3;
+        }
+
+        .lc-stat-box.medium {
+            border-top: 5px solid #FFC01E;
+        }
+
+        .lc-stat-box.hard {
+            border-top: 5px solid #FF375F;
+        }
+
+        .lc-stat-box.total {
+            border-top: 5px solid #FFA116;
+        }
+
+        .lc-stat-num {
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            color: var(--black);
+        }
+
+        .lc-stat-box.easy .lc-stat-num { color: #008778; }
+        .lc-stat-box.medium .lc-stat-num { color: #B38600; }
+        .lc-stat-box.hard .lc-stat-num { color: #D61A40; }
+
+        .lc-stat-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--black-muted);
+        }
+
+        .lc-progress-container {
+            margin-bottom: 2.25rem;
+        }
+
+        .lc-progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--black-subtle);
+        }
+
+        .lc-progress-track {
+            height: 14px;
+            background: var(--cream-muted);
+            border: 1.5px solid var(--black);
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 1px 1px 0px var(--black);
+        }
+
+        .lc-bar-easy {
+            height: 100%;
+            background: #00B8A3;
+            width: 33.33%;
+            transition: width 1s ease;
+        }
+
+        .lc-bar-medium {
+            height: 100%;
+            background: #FFC01E;
+            width: 50%;
+            transition: width 1s ease;
+        }
+
+        .lc-bar-hard {
+            height: 100%;
+            background: #FF375F;
+            width: 16.67%;
+            transition: width 1s ease;
+        }
+
+        .leetcode-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.35fr;
+            gap: 1.75rem;
+            padding-top: 1.75rem;
+            border-top: 2px dashed var(--cream-border);
+        }
+
+        .lc-detail-panel h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lc-tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .lc-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.85rem;
+            background: var(--cream);
+            border: 1.5px solid var(--black);
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--black);
+            box-shadow: 1.5px 1.5px 0px var(--black);
+        }
+
+        .lc-solved-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .lc-solved-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.65rem 0.9rem;
+            background: var(--cream);
+            border: 1.5px solid var(--black);
+            border-radius: 12px;
+            font-size: 0.88rem;
+            box-shadow: 2px 2px 0px var(--black);
+            transition: transform 0.2s ease;
+        }
+
+        .lc-solved-item:hover {
+            transform: translateX(3px);
+        }
+
+        .lc-problem-name {
+            font-weight: 600;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .lc-diff-badge {
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 0.2rem 0.55rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            border: 1px solid var(--black);
+        }
+
+        .lc-diff-badge.easy { background: #D4F5EC; color: #008778; }
+        .lc-diff-badge.medium { background: #FFF4D1; color: #B38600; }
+        .lc-diff-badge.hard { background: #FFD9DF; color: #D61A40; }
+
         /* ============== CONTACT SECTION ============== */
         .contact {
             padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 2rem);
@@ -1640,6 +1927,15 @@
                 gap: 3.5rem;
             }
 
+            .leetcode-stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .leetcode-details-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1716,6 +2012,20 @@
             .btn {
                 width: 100%;
                 max-width: 100%;
+            }
+
+            .leetcode-stats-row {
+                grid-template-columns: 1fr;
+            }
+
+            .leetcode-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .leetcode-btn {
+                width: 100%;
+                justify-content: center;
             }
         }
 
@@ -1927,6 +2237,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#coding" class="nav-link">Coding</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -2128,6 +2439,118 @@
         </div>
     </section>
 
+    <!-- COMPETITIVE CODING SECTION -->
+    <section class="coding" id="coding">
+        <div class="coding-container">
+            <div class="section-header reveal">
+                <span class="section-label">Problem Solving</span>
+                <h2 class="section-title">Competitive Coding</h2>
+                <p class="section-subtitle">Consistent practice in data structures and algorithmic efficiency. Solving real-world logic problems to build optimal, scalable code.</p>
+            </div>
+
+            <div class="leetcode-card reveal">
+                <!-- Card Header -->
+                <div class="leetcode-header">
+                    <div class="leetcode-profile-info">
+                        <div class="leetcode-logo-badge" aria-label="LeetCode Logo">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                            </svg>
+                        </div>
+                        <div class="leetcode-user-details">
+                            <h3>Divyanshu Pandey <span class="lc-pill" style="font-size: 0.72rem; padding: 0.15rem 0.6rem;">⚡ LeetCode</span></h3>
+                            <p>@_Divyanshupandey &bull; Active Problem Solver</p>
+                        </div>
+                    </div>
+                    <a href="https://leetcode.com/u/_Divyanshupandey/" target="_blank" rel="noopener noreferrer" class="leetcode-btn" aria-label="Visit Divyanshu's LeetCode Profile">
+                        <span>View LeetCode Profile</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Stats Numbers Row -->
+                <div class="leetcode-stats-row">
+                    <div class="lc-stat-box total">
+                        <div class="lc-stat-num" id="lc-total-solved">6</div>
+                        <div class="lc-stat-title">Total Solved</div>
+                    </div>
+                    <div class="lc-stat-box easy">
+                        <div class="lc-stat-num" id="lc-easy-solved">2</div>
+                        <div class="lc-stat-title">Easy Solved</div>
+                    </div>
+                    <div class="lc-stat-box medium">
+                        <div class="lc-stat-num" id="lc-medium-solved">3</div>
+                        <div class="lc-stat-title">Medium Solved</div>
+                    </div>
+                    <div class="lc-stat-box hard">
+                        <div class="lc-stat-num" id="lc-hard-solved">1</div>
+                        <div class="lc-stat-title">Hard Solved</div>
+                    </div>
+                </div>
+
+                <!-- Visual Distribution Bar -->
+                <div class="lc-progress-container">
+                    <div class="lc-progress-labels">
+                        <span>Difficulty Breakdown</span>
+                        <span>Easy (33%) &bull; Medium (50%) &bull; Hard (17%)</span>
+                    </div>
+                    <div class="lc-progress-track" aria-label="Difficulty Progress Bar">
+                        <div class="lc-bar-easy" id="lc-bar-easy" style="width: 33.33%;" title="Easy: 2 solved"></div>
+                        <div class="lc-bar-medium" id="lc-bar-medium" style="width: 50%;" title="Medium: 3 solved"></div>
+                        <div class="lc-bar-hard" id="lc-bar-hard" style="width: 16.67%;" title="Hard: 1 solved"></div>
+                    </div>
+                </div>
+
+                <!-- Details Grid: Competencies & Solved Problems -->
+                <div class="leetcode-details-grid">
+                    <div class="lc-detail-panel">
+                        <h4>🛠️ Languages & DSA Topics</h4>
+                        <div class="lc-tag-cloud">
+                            <span class="lc-pill">☕ Java</span>
+                            <span class="lc-pill">🐍 Python</span>
+                            <span class="lc-pill">📊 Arrays</span>
+                            <span class="lc-pill">🔤 Strings</span>
+                            <span class="lc-pill">👉 Two Pointers</span>
+                            <span class="lc-pill">🪟 Sliding Window</span>
+                            <span class="lc-pill">🔗 Linked Lists</span>
+                            <span class="lc-pill">🗂️ Hash Tables</span>
+                        </div>
+                    </div>
+
+                    <div class="lc-detail-panel">
+                        <h4>🎯 Featured Accepted Solutions</h4>
+                        <div class="lc-solved-list">
+                            <div class="lc-solved-item">
+                                <span class="lc-problem-name"><span>💎</span> Median of Two Sorted Arrays</span>
+                                <span class="lc-diff-badge hard">Hard</span>
+                            </div>
+                            <div class="lc-solved-item">
+                                <span class="lc-problem-name"><span>⚡</span> Container With Most Water</span>
+                                <span class="lc-diff-badge medium">Medium</span>
+                            </div>
+                            <div class="lc-solved-item">
+                                <span class="lc-problem-name"><span>⚡</span> Longest Substring Without Repeating</span>
+                                <span class="lc-diff-badge medium">Medium</span>
+                            </div>
+                            <div class="lc-solved-item">
+                                <span class="lc-problem-name"><span>⚡</span> Add Two Numbers</span>
+                                <span class="lc-diff-badge medium">Medium</span>
+                            </div>
+                            <div class="lc-solved-item">
+                                <span class="lc-problem-name"><span>🟢</span> Two Sum</span>
+                                <span class="lc-diff-badge easy">Easy</span>
+                            </div>
+                            <div class="lc-solved-item">
+                                <span class="lc-problem-name"><span>🟢</span> Longest Common Prefix</span>
+                                <span class="lc-diff-badge easy">Easy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <div class="section-container">
@@ -2221,6 +2644,7 @@
                     <a href="#about" style="display: block;">About</a>
                     <a href="#skills" style="display: block;">Skills</a>
                     <a href="#projects" style="display: block;">Projects</a>
+                    <a href="#coding" style="display: block;">Coding</a>
                     <a href="#contact" style="display: block;">Contact</a>
                 </div>
                 <div class="footer-section">
@@ -2620,6 +3044,41 @@
                 mobileToggle.focus();
             }
         });
+
+        // ============== LIVE LEETCODE STATS AUTO-UPDATE ==============
+        async function fetchLeetCodeStats() {
+            try {
+                const res = await fetch('https://alfa-leetcode-api.onrender.com/userProfile/_Divyanshupandey');
+                if (!res.ok) return;
+                const data = await res.json();
+                if (data && typeof data.totalSolved === 'number') {
+                    const totalEl = document.getElementById('lc-total-solved');
+                    const easyEl = document.getElementById('lc-easy-solved');
+                    const mediumEl = document.getElementById('lc-medium-solved');
+                    const hardEl = document.getElementById('lc-hard-solved');
+                    const barEasy = document.getElementById('lc-bar-easy');
+                    const barMedium = document.getElementById('lc-bar-medium');
+                    const barHard = document.getElementById('lc-bar-hard');
+
+                    if (totalEl) totalEl.textContent = data.totalSolved;
+                    if (easyEl && data.easySolved !== undefined) easyEl.textContent = data.easySolved;
+                    if (mediumEl && data.mediumSolved !== undefined) mediumEl.textContent = data.mediumSolved;
+                    if (hardEl && data.hardSolved !== undefined) hardEl.textContent = data.hardSolved;
+
+                    if (data.totalSolved > 0) {
+                        const easyPct = (((data.easySolved || 0) / data.totalSolved) * 100).toFixed(1);
+                        const medPct = (((data.mediumSolved || 0) / data.totalSolved) * 100).toFixed(1);
+                        const hardPct = (((data.hardSolved || 0) / data.totalSolved) * 100).toFixed(1);
+                        if (barEasy) barEasy.style.width = easyPct + '%';
+                        if (barMedium) barMedium.style.width = medPct + '%';
+                        if (barHard) barHard.style.width = hardPct + '%';
+                    }
+                }
+            } catch (err) {
+                // Silently keep pre-rendered baseline stats
+            }
+        }
+        window.addEventListener('load', fetchLeetCodeStats);
     </script>
 </body>
 </html>
