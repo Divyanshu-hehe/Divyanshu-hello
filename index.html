@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#FFFDF2">
     <title>Divyanshu Pandey | Creative Full Stack Developer</title>
     <meta name="description" content="Portfolio of Divyanshu Pandey — a passionate full stack developer specializing in crafting beautiful, responsive, and user-centric web experiences.">
-    <meta name="keywords" content="Divyanshu Pandey, Full Stack Developer, Web Developer, Portfolio, JavaScript, Python, React">
+    <meta name="keywords" content="Divyanshu Pandey, Full Stack Developer, Web Developer, Portfolio, JavaScript, Python">
     <meta name="author" content="Divyanshu Pandey">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2310,48 +2310,59 @@
         }
 
         .social-link {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 2px solid var(--black);
-            display: flex;
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            border: none;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             color: var(--black);
             text-decoration: none;
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 2px 2px 0px var(--black);
-            background: var(--cream);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: none;
+            background: transparent;
             flex-shrink: 0;
+            padding: 4px;
         }
 
         .social-link:hover {
-            background: var(--black);
-            color: var(--cream);
-            transform: translate(-2px, -2px);
-            box-shadow: 4px 4px 0px var(--black);
+            background: transparent;
+            color: var(--black-muted);
+            transform: translateY(-3px) scale(1.15);
+            box-shadow: none;
+        }
+
+        .social-link.linkedin-link:hover {
+            color: #0A66C2;
+            background: transparent;
+        }
+
+        .social-link.x-link:hover {
+            color: var(--black);
+            background: transparent;
         }
 
         .social-link.whatsapp-link:hover {
-            background: #25D366;
-            color: #FFFFFF;
+            background: transparent;
+            color: #25D366;
         }
 
         .social-link.instagram-link:hover {
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-            color: #FFFFFF;
+            background: transparent;
+            color: #E1306C;
         }
 
         .social-link svg {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             fill: currentColor;
             display: block;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .social-link:hover svg {
-            transform: scale(1.12);
+            transform: scale(1.08);
         }
 
         .footer-bottom {
@@ -2801,8 +2812,8 @@
             }
 
             .social-link {
-                width: 42px;
-                height: 42px;
+                width: auto;
+                height: auto;
             }
 
             footer {
@@ -2963,8 +2974,6 @@
                         <span class="tech-badge"><span class="tech-icon">🎨</span> CSS3</span>
                         <span class="tech-badge"><span class="tech-icon">⚡</span> JavaScript</span>
                         <span class="tech-badge"><span class="tech-icon">🐍</span> Python</span>
-                        <span class="tech-badge"><span class="tech-icon">⚛️</span> React</span>
-                        <span class="tech-badge"><span class="tech-icon">🟢</span> Node.js</span>
                         <span class="tech-badge"><span class="tech-icon">🔀</span> Git</span>
                         <span class="tech-badge"><span class="tech-icon">🗄️</span> SQL</span>
                         <span class="tech-badge"><span class="tech-icon">📦</span> npm</span>
@@ -2998,15 +3007,6 @@
                                 <div class="skill-bar-fill" data-width="75"></div>
                             </div>
                         </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-bar-header">
-                                <span class="skill-bar-label">React & Node.js</span>
-                                <span class="skill-bar-percent">65%</span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-width="65"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -3023,9 +3023,9 @@
             <div class="stats-grid">
                 <div class="stat-card reveal">
                     <span class="stat-emoji">🚀</span>
-                    <div class="stat-number" data-target="5">0</div>
-                    <div class="stat-label">Projects Built</div>
-                    <div class="stat-description">From portfolios to full-stack apps, each project pushes my boundaries further.</div>
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-label">Project Built</div>
+                    <div class="stat-description">From personal portfolio to full-stack apps, each project pushes my boundaries further.</div>
                 </div>
                 <div class="stat-card reveal">
                     <span class="stat-emoji">📅</span>
@@ -3697,11 +3697,11 @@
                     <p>Get in touch for collaborations or inquiries.</p>
                     <div class="social-links">
                         <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/divyanshu-pandey-841965346/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile" title="Connect on LinkedIn">
+                        <a href="https://www.linkedin.com/in/divyanshu-pandey-841965346/" target="_blank" rel="noopener noreferrer" class="social-link linkedin-link" aria-label="LinkedIn Profile" title="Connect on LinkedIn">
                             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
                         </a>
                         <!-- Twitter/X -->
-                        <a href="https://x.com/pandey_div62755" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X Profile" title="Follow on X">
+                        <a href="https://x.com/pandey_div62755" target="_blank" rel="noopener noreferrer" class="social-link x-link" aria-label="X Profile" title="Follow on X">
                             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
                         <!-- Instagram -->
@@ -3925,9 +3925,10 @@
                     const target = parseInt(entry.target.getAttribute('data-target'));
                     const suffix = entry.target.getAttribute('data-suffix') || '';
                     let current = 0;
-                    const increment = target / 60; // complete in ~60 frames
-                    const duration = 2000; // 2 seconds
-                    const stepTime = duration / (target / increment);
+                    const duration = target <= 5 ? 800 : 2000;
+                    const steps = Math.min(60, Math.max(target * 10, 20));
+                    const increment = target / steps;
+                    const stepTime = duration / steps;
 
                     const counter = setInterval(() => {
                         current += increment;
@@ -3935,7 +3936,7 @@
                             current = target;
                             clearInterval(counter);
                         }
-                        entry.target.textContent = Math.floor(current) + suffix;
+                        entry.target.textContent = Math.round(current) + suffix;
                     }, stepTime);
 
                     counterObserver.unobserve(entry.target);
